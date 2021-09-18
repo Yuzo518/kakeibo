@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/', "App\Http\Controllers\BookController@index");
 
 Route::resource("books","App\Http\Controllers\BookController");
+Route::resource("teams","App\Http\Controllers\TeamController");
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
