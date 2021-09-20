@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class TeamController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     function index(){
         $teams = Team::all();
         return view("teams.index",compact("teams"));
