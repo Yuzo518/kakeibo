@@ -19,6 +19,9 @@ Route::get('/', function () {
 });
 */
 Route::get('/', "App\Http\Controllers\BookController@index");
+Route::get('/tornament', function () {
+    return view('tornament');
+});
 
 Route::resource("books","App\Http\Controllers\BookController");
 Route::resource("teams","App\Http\Controllers\TeamController");
