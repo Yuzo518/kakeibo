@@ -15,6 +15,10 @@ class User extends Authenticatable
     public function books(){
         return $this->hasMany("App\Models\Book");
     }
+
+    public function team(){
+        return $this->belongsTo("App\Models\Team");
+    }
     /**
      * The attributes that are mass assignable.
      *
